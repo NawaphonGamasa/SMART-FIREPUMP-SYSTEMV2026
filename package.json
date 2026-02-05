@@ -1,0 +1,16 @@
+{
+  "name": "smart-firepump-systemv2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && node server.js\" \"cd frontend && npm run dev\"",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
