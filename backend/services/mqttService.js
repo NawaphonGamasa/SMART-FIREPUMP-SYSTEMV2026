@@ -1,5 +1,5 @@
 const mqtt = require('mqtt');
-const FirePumpModel = require('../models/FirePumpModel');
+const LogModel = require('../models/LogModel');
 const logger = require('../utils/logger');
 
 // เชื่อมต่อ MQTT Broker
@@ -29,7 +29,7 @@ const initMqtt = (io) => {
                 const data = JSON.parse(msgStr);
 
                 // A. บันทึกลง Database
-                await FirePumpModel.create(data);
+                await LogModel.create(data);
 
                 // B. ส่ง Socket ไปหน้าเว็บ (Event ชื่อ 'firepump-update')
                 io.emit('firepump-update', data);
