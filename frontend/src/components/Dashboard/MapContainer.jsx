@@ -2,10 +2,10 @@ import React from 'react';
 import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import FirePumpPopup from './FirePumpPopup.jsx';
+import FirePumpPopup from './StationPopup.jsx';
 
 // ขอบเขตของรูปแผนที่
-const bounds = [[1284, 0], [0, 2100]];
+const bounds = [[1284, 0], [0, 2048]];
 
 const createIcon = (statusRun, statusFault, isNearTop) => {
     let colorClass = 'marker-green';
@@ -32,8 +32,8 @@ const FirePumpMap = ({ stations }) => {
             maxBounds={bounds}
             maxBoundsViscosity={1.0}
             className="w-full h-full rounded-lg shadow-lg bg-gray-900 z-0"
-            minZoom={-1}
-            maxZoom={2}
+            minZoom={-0.5}
+            maxZoom={2} zoomSnap={0.1}
             scrollWheelZoom={true}
             style={{ height: '100%', width: '100%' }}
         >

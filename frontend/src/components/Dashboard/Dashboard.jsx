@@ -1,8 +1,8 @@
 import React from 'react';
-import FirePumpMap from "./FirePumpMap"; 
-import FirePumpPanel from "./FirePumpPanel";
+import FirePumpMap from "./MapContainer"; 
+import FirePumpPanel from "./StatusPanel";
 import Loading from '../Common/Loading';
-import useFirePump from '../../hooks/useFirePump';
+import useFirePump from '../../hooks/useRealtime';
 
 // พิกัดสมมติ (เปลี่ยนตามหน้างานจริง)
 const STATION_COORDS = [
@@ -39,7 +39,7 @@ const FirePumpDashboard = () => {
             </div>
 
             {/* ส่วน Panel (ขวา) */}
-            <div className="w-[350px] flex-shrink-0 bg-gray-800 border-l border-gray-700 shadow-2xl z-10 flex flex-col">
+            <div className="w-[25%] flex-shrink-0 bg-gray-800 border-l border-gray-700 shadow-2xl z-10 flex flex-col">
                 <FirePumpPanel stations={stations} />
             </div>
 

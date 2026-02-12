@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const firePumpController = require('../controllers/firePumpController');
+const dataController = require('../controllers/dataController');
 
 // GET ข้อมูล Dashboard (สถานะปั๊มทุกตัว)
-router.get('/dashboard', firePumpController.getDashboardData);
+router.get('/dashboard', dataController.getDashboardData);
 
 module.exports = router;

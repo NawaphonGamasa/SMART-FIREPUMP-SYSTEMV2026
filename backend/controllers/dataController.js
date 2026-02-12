@@ -1,4 +1,4 @@
-const FirePumpModel = require('../models/FirePumpModel');
+const FirePumpModel = require('../models/LogModel');
 
 exports.getDashboardData = async (req, res) => {
     try {
