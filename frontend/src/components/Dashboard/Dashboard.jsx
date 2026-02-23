@@ -23,7 +23,7 @@ const FirePumpDashboard = () => {
     }));
 
     return (
-        <div className="flex h-screen w-screen bg-gray-900 text-white overflow-hidden font-sans">
+        <div className="flex flex-col md:flex-row h-screen w-screen bg-gray-900 text-white overflow-hidden font-sans">
 
             {/* ส่วนแผนที่ (ซ้าย) */}
             <div className="flex-1 relative z-0">
@@ -39,7 +39,7 @@ const FirePumpDashboard = () => {
             </div>
 
             {/* ส่วน Panel (ขวา) */}
-            <div className="w-[25%] flex-shrink-0 bg-gray-800 border-l border-gray-700 shadow-2xl z-10 flex flex-col">
+            <div className="w-full h-[45vh] md:w-[25%] md:h-full flex-shrink-0 bg-gray-800 border-t md:border-t-0 md:border-l border-gray-700 shadow-2xl z-10 flex flex-col">
                 <StatusPanel stations={stations} />
             </div>
 

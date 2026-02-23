@@ -26,7 +26,7 @@ const FirePumpPopup = ({ data }) => {
         : '--:--';
 
     return (
-        <div className={`w-80 bg-gray-900/95 backdrop-blur-xl text-white rounded-xl border ${borderColor} shadow-2xl overflow-hidden font-sans select-none`}>
+        <div className={`w-[85vw] sm:w-80 bg-gray-900/95 backdrop-blur-xl text-white rounded-xl border ${borderColor} shadow-2xl overflow-hidden font-sans select-none`}>
 
             {/* Header */}
             <div className="bg-gray-800/80 p-2.5 flex justify-between items-center border-b border-gray-700">
