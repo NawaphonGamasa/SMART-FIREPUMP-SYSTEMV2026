@@ -1,6 +1,6 @@
 const db = require("../config/db");
 
-const FirePumpModel = {
+const LogModel = {
     // ดึงสถานะล่าสุดของปั๊มทุกตัว (Group By เพื่อเอาข้อมูลล่าสุดของแต่ละ Station ID)
     async getLatestAllStations() {
         const sql = `
@@ -31,7 +31,16 @@ const FirePumpModel = {
             data.timestamp || new Date()
         ]);
         return result.insertId;
+    },
+
+    async getByDateRange(startDate, endDate) {
+        const sql = `
+        SELECT * FROM fire_pump_logs
+        WHERE DATE(timestamp) BETWEEN ? AND ?
+        ORDER BY timestamp DESC LIMIT 1000`;
+        const [rows] = await db.execute(sql, [startDate, endDate]);
+        return rows;
     }
 };
 
-module.exports = FirePumpModel;
+module.exports = LogModel;

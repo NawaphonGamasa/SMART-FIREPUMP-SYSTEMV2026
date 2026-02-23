@@ -1,8 +1,8 @@
 import React from 'react';
 import FirePumpMap from "./MapContainer"; 
-import FirePumpPanel from "./StatusPanel";
+import StatusPanel from "./StatusPanel";
 import Loading from '../Common/Loading';
-import useFirePump from '../../hooks/useRealtime';
+import useRealtime from '../../hooks/useRealtime';
 
 // พิกัดสมมติ (เปลี่ยนตามหน้างานจริง)
 const STATION_COORDS = [
@@ -11,7 +11,7 @@ const STATION_COORDS = [
 ];
 
 const FirePumpDashboard = () => {
-    const { stations, isConnected, isLoading } = useFirePump();
+    const { stations, isConnected, isLoading } = useRealtime();
 
     if (isLoading) return <Loading />;
 
@@ -40,7 +40,7 @@ const FirePumpDashboard = () => {
 
             {/* ส่วน Panel (ขวา) */}
             <div className="w-[25%] flex-shrink-0 bg-gray-800 border-l border-gray-700 shadow-2xl z-10 flex flex-col">
-                <FirePumpPanel stations={stations} />
+                <StatusPanel stations={stations} />
             </div>
 
         </div>

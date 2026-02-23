@@ -9,7 +9,7 @@ const bounds = [[1284, 0], [0, 2048]];
 
 const createIcon = (statusRun, statusFault, isNearTop) => {
     let colorClass = 'marker-green';
-    if (statusFault === 1) colorClass = 'marker-red';
+    if (statusFault === 0) colorClass = 'marker-red';
 
     // ถ้าอยู่บน (isNearTop) -> ให้จุดเริ่มอยู่ที่ "ก้น" ของหมุด ([0, 20]) เพื่อจะงอกลงล่าง
     // ถ้าอยู่ล่าง (ปกติ) -> ให้จุดเริ่มอยู่ที่ "หัว" ของหมุด ([0, -10]) เพื่อจะงอกขึ้นบน
@@ -32,7 +32,7 @@ const FirePumpMap = ({ stations }) => {
             maxBounds={bounds}
             maxBoundsViscosity={1.0}
             className="w-full h-full rounded-lg shadow-lg bg-gray-900 z-0"
-            minZoom={-0.5}
+            minZoom={0}
             maxZoom={2} zoomSnap={0.1}
             scrollWheelZoom={true}
             style={{ height: '100%', width: '100%' }}

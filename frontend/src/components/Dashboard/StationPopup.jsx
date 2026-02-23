@@ -9,7 +9,7 @@ const FirePumpPopup = ({ data }) => {
     let StatusIcon = CheckCircle;
     let borderColor = 'border-green-500/50';
 
-    if (data.status_fault === 1) {
+    if (data.status_fault === 0) {
         statusText = 'FAULT';
         statusColor = 'text-red-500';
         StatusIcon = AlertTriangle;
@@ -22,7 +22,7 @@ const FirePumpPopup = ({ data }) => {
     }
 
     const timeStr = data.timestamp
-        ? new Date(data.timestamp).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })
+        ? new Date(data.timestamp).toLocaleTimeString('th-TH', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
         : '--:--';
 
     return (
@@ -50,7 +50,7 @@ const FirePumpPopup = ({ data }) => {
                             <Droplets size={10} className="text-blue-500" /> Oil Pressure
                         </p>
                         <div className="flex items-baseline gap-1">
-                            <span className={`text-3xl font-black font-mono ${data.status_fault ? 'text-red-400' : 'text-blue-400'}`}>
+                            <span className={`text-3xl font-black font-mono ${data.status_fault === 0 ? 'text-red-400' : 'text-blue-400'}`}>
                                 {data.oil_pressure || 0}
                             </span>
                             <span className="text-xs text-gray-500 font-medium">Bar</span>
@@ -75,8 +75,8 @@ const FirePumpPopup = ({ data }) => {
                     {/* Reading / Fault */}
                     <div className="flex items-center justify-between bg-black/20 p-2 rounded-lg border border-white/5">
                         <span className="text-[9px] text-gray-400 font-bold uppercase">Reading / Fault</span>
-                        {/* ถ้า Fault=0 คือปกติ(เขียว), Fault=1 คือเสีย(แดง) */}
-                        <div className={`w-2.5 h-2.5 rounded-full shadow-lg ${data.status_fault === 0 ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent'}`}></div>
+                        {/* ถ้า Fault=1 คือปกติ(เขียว), Fault=0 คือเสีย(แดง) */}
+                        <div className={`w-2.5 h-2.5 rounded-full shadow-lg ${data.status_fault === 1 ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent'}`}></div>
                     </div>
                 </div>
 
