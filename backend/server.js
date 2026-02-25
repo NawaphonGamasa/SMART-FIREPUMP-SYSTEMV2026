@@ -19,7 +19,17 @@ const server = http.createServer(app);
 
 // 3. Security Middleware
 app.use(helmet());
-app.use(cors({ origin: '*', methods: ['GET', 'POST'], credentials: true }));
+const corsOptions = {
+    origin: function (origin, callback) {
+        // อนุญาตให้ผ่านหมด
+        // null คือกรณีเรียกจาก Server-to-Server หรือ Postman
+        callback(null, true);
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true // อนุญาตให้ส่ง Cookie/Header ข้าม Domain ได้
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // 4. Rate Limiting (ความปลอดภัย: กันยิงรัว)

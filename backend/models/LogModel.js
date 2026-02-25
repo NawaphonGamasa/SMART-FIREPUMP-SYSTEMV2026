@@ -21,14 +21,13 @@ const LogModel = {
     async create(data) {
         const sql = `
         INSERT INTO fire_pump_logs (station_id, status_run, status_fault, oil_pressure, timestamp)
-        VALUES (?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, NOW())
     `;
         const [result] = await db.execute(sql, [
             data.station_id,
             data.status_run,
             data.status_fault,
             data.oil_pressure,
-            data.timestamp || new Date()
         ]);
         return result.insertId;
     },

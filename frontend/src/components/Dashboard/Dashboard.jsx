@@ -19,7 +19,7 @@ const FirePumpDashboard = () => {
     const mapStations = stations.map((st) => ({
         ...st,
         position: STATION_COORDS[st.station_id - 1] || [0, 0],
-        camUrl: `http://192.168.1.10${st.station_id}/snapshot` // URL กล้องสมมติ
+        camUrl: `http://localhost:1880/camfire${st.station_id}` // URL กล้อง
     }));
 
     return (

@@ -13,7 +13,8 @@ frontend/build/
 
 # Logs (ส่วนนี้คือสั่งให้ Git มองข้ามไฟล์ Log)
 logs/
-*.log
+*.logs
+*.logscamera
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

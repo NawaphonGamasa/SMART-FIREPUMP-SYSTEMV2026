@@ -4,7 +4,7 @@ import CCTVPlayer from '../Video/CCTVPlayer';
 
 const FirePumpPopup = ({ data }) => {
     // Logic เดิม
-    let statusText = 'NORMAL';
+    let statusText = 'READING';
     let statusColor = 'text-green-400';
     let StatusIcon = CheckCircle;
     let borderColor = 'border-green-500/50';
