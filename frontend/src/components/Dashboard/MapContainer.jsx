@@ -31,7 +31,7 @@ const FirePumpMap = ({ stations }) => {
             bounds={bounds}
             maxBounds={bounds}
             maxBoundsViscosity={1.0}
-            className="w-full h-full rounded-lg shadow-lg bg-gray-900 z-0"
+            className="w-full h-full bg-[#0B1121] z-0 rounded-none lg:rounded-2xl shadow-none lg:shadow-2xl lg:border lg:border-gray-800 outline-none"
             minZoom={0}
             maxZoom={2} zoomSnap={0.1}
             scrollWheelZoom={true}
