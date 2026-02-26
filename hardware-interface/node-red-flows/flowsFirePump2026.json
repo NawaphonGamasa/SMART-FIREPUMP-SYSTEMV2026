@@ -1,0 +1,1896 @@
+[
+    {
+        "id": "b4bc1443fc46b358",
+        "type": "tab",
+        "label": "FIrePump2026",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "72430557c516f5e9",
+        "type": "group",
+        "z": "b4bc1443fc46b358",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e523ff478dc98d59",
+            "49871e54ec90088c"
+        ],
+        "x": 1374,
+        "y": 219,
+        "w": 532,
+        "h": 122
+    },
+    {
+        "id": "73a06c22730ebab3",
+        "type": "group",
+        "z": "b4bc1443fc46b358",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "08d93274346b7227",
+            "824adbcf1ed49556",
+            "d981d936d245bab4",
+            "eb88a57d1fac7c2e",
+            "d8fd1f910b39efa1",
+            "bf121d8688a810c6",
+            "a391aa19cd4c913b"
+        ],
+        "x": 174,
+        "y": 199,
+        "w": 932,
+        "h": 362
+    },
+    {
+        "id": "4a1fdfdbb47db313",
+        "type": "group",
+        "z": "b4bc1443fc46b358",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "0c899aae834105a9",
+            "9e966c9d19067103",
+            "2c771268bb9fa368",
+            "0e0c8c4d83d7a786",
+            "70e250b4b876eac0",
+            "ec0c766c0d40c251",
+            "510815066949ded0",
+            "ed4c4b1516799ccf",
+            "6141c3048097a8e3",
+            "35f677cfefaf9d1e",
+            "ca8195dd82478b0f",
+            "44f7377792b03326",
+            "1855906564d93afc",
+            "4bc3fa01099b9075",
+            "9ca3e15e65d0ecdf",
+            "157454ad62e0fb8d",
+            "1c0365249fe98f54",
+            "e1ea42a874efbb17",
+            "0bd2e4b077eeaa6c",
+            "f6cac778db14e4ed",
+            "7da745a69d0bd6e1",
+            "cdbc338f7953c367",
+            "98bcce436c03b2ed",
+            "20fb6bf488027e48",
+            "0563e16d49fca97c",
+            "612c993643898449",
+            "1e1fc0e80dad3ff5",
+            "465cfcd2dc40d314",
+            "177d6801dde0b1d1"
+        ],
+        "x": 14,
+        "y": 1159,
+        "w": 1312,
+        "h": 782
+    },
+    {
+        "id": "93256a72c455a563",
+        "type": "group",
+        "z": "b4bc1443fc46b358",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "088ccd780519e743",
+            "92f1f1b001a38194",
+            "ab938592c70ee431",
+            "b86a24cf15d50398",
+            "b9ee39b41cd2a131",
+            "43ad79d8599407d2",
+            "5b1963505a5d1433",
+            "b320616c700957fd",
+            "fa585477936b23e7",
+            "86712885843a0c5a",
+            "3f9426ba9fa2c488",
+            "503978c765a3310f",
+            "5b1fa28ddfeec009",
+            "525e854d3474e659",
+            "43a9cfb1bd9ed52c",
+            "0d470a7bfaf084d3",
+            "b8cde3f41d340468",
+            "7fb1608d558b108b",
+            "a101f1c758615fa8",
+            "4e27411744dca563",
+            "dd6eb48dfc2c762f",
+            "19d8d3069d8f95ea",
+            "99c54146ad2f770d",
+            "dc3f56c3415291da",
+            "12d9fd0900edc259",
+            "bbd13cb3b2377c7a",
+            "f9788864dc8b82ec",
+            "08c1aea77a0e4735",
+            "f0ebd1aec012e823",
+            "b99c98fa0dc34284",
+            "ef2486abcb831ab5",
+            "4e65d01d8f3cd95c",
+            "538fd9df1efc81da",
+            "9c57c3de982ff5fa",
+            "9c688f708fbc292c"
+        ],
+        "x": 1174,
+        "y": 419,
+        "w": 1452,
+        "h": 722
+    },
+    {
+        "id": "08d93274346b7227",
+        "type": "s7 in",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "endpoint": "3860d8fd5640f9de",
+        "mode": "all",
+        "variable": "Start/Stop (Run) 01",
+        "diff": true,
+        "name": "",
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "824adbcf1ed49556"
+            ]
+        ]
+    },
+    {
+        "id": "e523ff478dc98d59",
+        "type": "mysql",
+        "z": "b4bc1443fc46b358",
+        "g": "72430557c516f5e9",
+        "mydb": "7479a431e0acf380",
+        "name": "",
+        "x": 1470,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "824adbcf1ed49556",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "function",
+        "func": "const data = msg.payload;\n\nconst stationConfig = [\n    { id: 1, run: \"Start/Stop (Run) 01\", fault: \"Reading/Fault 01\", pressure: \"Oil Sensors (Spare) 01\" },\n    { id: 2, run: \"Start/Stop (Run) 02\", fault: \"Reading/Fault 02\", pressure: \"Oil Sensors (Spare) 02\" },\n    { id: 3, run: \"Start/Stop (Run) 03\", fault: \"Reading/Fault 03\", pressure: \"Oil Sensors (Spare) 03\" },\n    { id: 4, run: \"Start/Stop (Run) 04\", fault: \"Reading/Fault 04\", pressure: \"Oil Sensors (Spare) 04\" },\n    { id: 5, run: \"Start/Stop (Run) 05\", fault: \"Reading/Fault 05\", pressure: \"Oil Sensors (Spare) 05\" },\n    { id: 6, run: \"Start/Stop (Run) 06\", fault: \"Reading/Fault 06\", pressure: \"Oil Sensors (Spare) 06\" },\n    { id: 7, run: \"Start/Stop (Run) 07\", fault: \"Reading/Fault 07\", pressure: \"Oil Sensors (Spare) 07\" },\n    { id: 8, run: \"Start/Stop (Run) 08\", fault: \"Reading/Fault 08\", pressure: \"Oil Sensors (Spare) 08\" }\n];\n\nconst mqttMsgs = [];\n\nstationConfig.forEach(st => {\n    // เช็คว่ามีข้อมูลของ station นี้ส่งมาไหม\n    if (data[st.run] === undefined) return;\n\n    const payload = {\n        station_id: st.id,\n        status_run: data[st.run] ? 1 : 0,\n        status_fault: data[st.fault] ? 1 : 0,\n        oil_pressure: data[st.pressure] || 0,\n    };\n\n    const key = `station_${st.id}`;\n    const last = context.get(key);\n\n    // ตรวจว่าค่าเปลี่ยนหรือไม่ (เพื่อลดปริมาณข้อมูล)\n    const changed = !last ||\n        last.status_run !== payload.status_run ||\n        last.status_fault !== payload.status_fault ||\n        Math.abs(last.oil_pressure - payload.oil_pressure) > 2;\n\n    if (!changed) return;\n\n    // เก็บค่าล่าสุดไว้เทียบรอบหน้า\n    context.set(key, payload);\n\n    // ---- ส่ง MQTT อย่างเดียว ----\n    mqttMsgs.push({\n        topic: `firepump/station/${st.id}/status`,\n        payload\n    });\n});\n\n// ส่งออกแค่ทางเดียว (Output 1 -> MQTT)\nreturn [mqttMsgs];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 400,
+        "wires": [
+            [
+                "eb88a57d1fac7c2e",
+                "bf121d8688a810c6",
+                "088ccd780519e743"
+            ]
+        ]
+    },
+    {
+        "id": "d981d936d245bab4",
+        "type": "inject",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Start/Stop (Run) 01\":true,\"Reading/Fault 01\":false,\"Oil Sensors (Spare) 01\":550,\"Start/Stop (Run) 02\":false,\"Reading/Fault 02\":true,\"Oil Sensors (Spare) 02\":120,\"Start/Stop (Run) 03\":true,\"Reading/Fault 03\":false,\"Oil Sensors (Spare) 03\":120,\"Start/Stop (Run) 04\":true,\"Reading/Fault 04\":false,\"Start/Stop (Run) 05\":true,\"Reading/Fault 05\":false,\"Start/Stop (Run) 06\":true,\"Reading/Fault 06\":false,\"Oil Sensors (Spare) 06\":100,\"Start/Stop (Run) 07\":true,\"Reading/Fault 07\":false,\"Oil Sensors (Spare) 07\":120,\"Start/Stop (Run) 08\":true,\"Reading/Fault 08\":false}",
+        "payloadType": "json",
+        "x": 650,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb88a57d1fac7c2e",
+        "type": "mqtt out",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b75d9b192b66b3eb",
+        "x": 990,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d8fd1f910b39efa1",
+        "type": "inject",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Start/Stop (Run) 01\":true,\"Reading/Fault 01\":false,\"Oil Sensors (Spare) 01\":550,\"Start/Stop (Run) 02\":false,\"Reading/Fault 02\":true,\"Oil Sensors (Spare) 02\":120,\"Start/Stop (Run) 03\":false,\"Reading/Fault 03\":true,\"Oil Sensors (Spare) 03\":300,\"Start/Stop (Run) 04\":false,\"Reading/Fault 04\":true,\"Start/Stop (Run) 05\":true,\"Reading/Fault 05\":true,\"Start/Stop (Run) 06\":true,\"Reading/Fault 06\":false,\"Oil Sensors (Spare) 06\":100,\"Start/Stop (Run) 07\":false,\"Reading/Fault 07\":true,\"Oil Sensors (Spare) 07\":120,\"Start/Stop (Run) 08\":true,\"Reading/Fault 08\":false}",
+        "payloadType": "json",
+        "x": 630,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf121d8688a810c6",
+        "type": "debug",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "49871e54ec90088c",
+        "type": "comment",
+        "z": "b4bc1443fc46b358",
+        "g": "72430557c516f5e9",
+        "name": "เอาไว้เผื่ออยากบันทึกข้อมูลลง database โดยตรงไม่ต้องผ่าน websocket ",
+        "info": "",
+        "x": 1640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a391aa19cd4c913b",
+        "type": "comment",
+        "z": "b4bc1443fc46b358",
+        "g": "73a06c22730ebab3",
+        "name": "ส่วนของการรับข้อมูลที่ได้มาจากทุกstation ส่งมาให้ plc server เพื่อเอาขึ้นหน้าเว็บ",
+        "info": "ถ้าอยากเพิ่มมากกว่า 8 สถานีต้องเพิ่ม plc server อีกตัวเพราะตัวนี้รองรับได้สูงสุดแค่ 8 station",
+        "x": 460,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0c899aae834105a9",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire1",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1300,
+        "wires": [
+            [
+                "9e966c9d19067103"
+            ]
+        ]
+    },
+    {
+        "id": "9e966c9d19067103",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam1",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1300,
+        "wires": [
+            [
+                "2c771268bb9fa368"
+            ]
+        ]
+    },
+    {
+        "id": "2c771268bb9fa368",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "0e0c8c4d83d7a786",
+        "type": "catch",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "scope": [
+            "9e966c9d19067103"
+        ],
+        "uncaught": false,
+        "x": 170,
+        "y": 1900,
+        "wires": [
+            [
+                "70e250b4b876eac0"
+            ]
+        ]
+    },
+    {
+        "id": "70e250b4b876eac0",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 410,
+        "y": 1900,
+        "wires": [
+            [
+                "ec0c766c0d40c251"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ec0c766c0d40c251",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "function 5",
+        "func": "// ดึงเวลาปัจจุบัน\nvar now = new Date().toLocaleString('th-TH');\n\n// สร้างข้อความที่จะบันทึก\nmsg.payload = now + \" : ❌ Camera Offline (Connection Failed)\\n\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1900,
+        "wires": [
+            [
+                "510815066949ded0"
+            ]
+        ]
+    },
+    {
+        "id": "510815066949ded0",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "filename": "D:\\SMART-FIREPUMP-SYSTEMV2026\\logscamera\\camera_error.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1050,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed4c4b1516799ccf",
+        "type": "comment",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "ส่วนที่เกี่ยวกับกล้อง CCTV",
+        "info": "# # # ## node http 3 ตัวสีเหลืองนี้ node ตัวแรกเอาไว้ตั้ง api ต่อท้ายเพื่อใช้ระบุกล้องตัวที่จะดู\n# # # ## ืnode ตรงกลาง Link cam1 นี้ไว้ใส่ลิ้ง IP กล้อง\n# # # ## # node หลังสุดเอาไว้ตั้งชนิดที่ส่งออก ตอนนี้เป็น image/jpeg\n\nืnode 4 ตัวล่างไว้สำหรับเก็บ log วันเวลาที่กล้องเสียหรือดับ",
+        "x": 150,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "088ccd780519e743",
+        "type": "switch",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "property": "payload.status_fault",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1250,
+        "y": 760,
+        "wires": [
+            [
+                "3f9426ba9fa2c488"
+            ]
+        ]
+    },
+    {
+        "id": "92f1f1b001a38194",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 540,
+        "wires": [
+            [
+                "ab938592c70ee431"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ab938592c70ee431",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam1",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 540,
+        "wires": [
+            [
+                "b86a24cf15d50398"
+            ]
+        ]
+    },
+    {
+        "id": "b86a24cf15d50398",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 6",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_1_Fault_\" + timeString + \".jpg\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 540,
+        "wires": [
+            [
+                "b9ee39b41cd2a131"
+            ]
+        ]
+    },
+    {
+        "id": "b9ee39b41cd2a131",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43ad79d8599407d2",
+        "type": "comment",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "ส่วนที่เกี่ยวกับกล้อง CCTV จะ save รูปเมื่อเกิดข้อผืดพลาด",
+        "info": "",
+        "x": 1420,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "6141c3048097a8e3",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam2",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1380,
+        "wires": [
+            [
+                "ca8195dd82478b0f"
+            ]
+        ]
+    },
+    {
+        "id": "35f677cfefaf9d1e",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire2",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1380,
+        "wires": [
+            [
+                "6141c3048097a8e3"
+            ]
+        ]
+    },
+    {
+        "id": "ca8195dd82478b0f",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "44f7377792b03326",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam3",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1440,
+        "wires": [
+            [
+                "4bc3fa01099b9075"
+            ]
+        ]
+    },
+    {
+        "id": "1855906564d93afc",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire3",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1440,
+        "wires": [
+            [
+                "44f7377792b03326"
+            ]
+        ]
+    },
+    {
+        "id": "4bc3fa01099b9075",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "9ca3e15e65d0ecdf",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam4",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1500,
+        "wires": [
+            [
+                "1c0365249fe98f54"
+            ]
+        ]
+    },
+    {
+        "id": "157454ad62e0fb8d",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire4",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1500,
+        "wires": [
+            [
+                "9ca3e15e65d0ecdf"
+            ]
+        ]
+    },
+    {
+        "id": "1c0365249fe98f54",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e1ea42a874efbb17",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam5",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1580,
+        "wires": [
+            [
+                "f6cac778db14e4ed"
+            ]
+        ]
+    },
+    {
+        "id": "0bd2e4b077eeaa6c",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire5",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1580,
+        "wires": [
+            [
+                "e1ea42a874efbb17"
+            ]
+        ]
+    },
+    {
+        "id": "f6cac778db14e4ed",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "7da745a69d0bd6e1",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam6",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1660,
+        "wires": [
+            [
+                "98bcce436c03b2ed"
+            ]
+        ]
+    },
+    {
+        "id": "cdbc338f7953c367",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire6",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1660,
+        "wires": [
+            [
+                "7da745a69d0bd6e1"
+            ]
+        ]
+    },
+    {
+        "id": "98bcce436c03b2ed",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "20fb6bf488027e48",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam7",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1740,
+        "wires": [
+            [
+                "612c993643898449"
+            ]
+        ]
+    },
+    {
+        "id": "0563e16d49fca97c",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire7",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1740,
+        "wires": [
+            [
+                "20fb6bf488027e48"
+            ]
+        ]
+    },
+    {
+        "id": "612c993643898449",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "1e1fc0e80dad3ff5",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "Link Cam8",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1820,
+        "wires": [
+            [
+                "177d6801dde0b1d1"
+            ]
+        ]
+    },
+    {
+        "id": "465cfcd2dc40d314",
+        "type": "http in",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "url": "/camfire8",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1820,
+        "wires": [
+            [
+                "1e1fc0e80dad3ff5"
+            ]
+        ]
+    },
+    {
+        "id": "177d6801dde0b1d1",
+        "type": "http response",
+        "z": "b4bc1443fc46b358",
+        "g": "4a1fdfdbb47db313",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "image/jpeg"
+        },
+        "x": 1040,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "5b1963505a5d1433",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 1020,
+        "wires": [
+            [
+                "b320616c700957fd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b320616c700957fd",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam7",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 1020,
+        "wires": [
+            [
+                "fa585477936b23e7"
+            ]
+        ]
+    },
+    {
+        "id": "fa585477936b23e7",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 9",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_7_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 1020,
+        "wires": [
+            [
+                "86712885843a0c5a"
+            ]
+        ]
+    },
+    {
+        "id": "86712885843a0c5a",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f9426ba9fa2c488",
+        "type": "switch",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "property": "payload.station_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 8,
+        "x": 1470,
+        "y": 760,
+        "wires": [
+            [
+                "92f1f1b001a38194"
+            ],
+            [
+                "503978c765a3310f"
+            ],
+            [
+                "0d470a7bfaf084d3"
+            ],
+            [
+                "4e27411744dca563"
+            ],
+            [
+                "dc3f56c3415291da"
+            ],
+            [
+                "08c1aea77a0e4735"
+            ],
+            [
+                "5b1963505a5d1433"
+            ],
+            [
+                "4e65d01d8f3cd95c"
+            ]
+        ]
+    },
+    {
+        "id": "503978c765a3310f",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 620,
+        "wires": [
+            [
+                "5b1fa28ddfeec009"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5b1fa28ddfeec009",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam2",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 620,
+        "wires": [
+            [
+                "525e854d3474e659"
+            ]
+        ]
+    },
+    {
+        "id": "525e854d3474e659",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 10",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_2_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 620,
+        "wires": [
+            [
+                "43a9cfb1bd9ed52c"
+            ]
+        ]
+    },
+    {
+        "id": "43a9cfb1bd9ed52c",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d470a7bfaf084d3",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 700,
+        "wires": [
+            [
+                "b8cde3f41d340468"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b8cde3f41d340468",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam3",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 700,
+        "wires": [
+            [
+                "7fb1608d558b108b"
+            ]
+        ]
+    },
+    {
+        "id": "7fb1608d558b108b",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 11",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_3_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 700,
+        "wires": [
+            [
+                "a101f1c758615fa8"
+            ]
+        ]
+    },
+    {
+        "id": "a101f1c758615fa8",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e27411744dca563",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 780,
+        "wires": [
+            [
+                "dd6eb48dfc2c762f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dd6eb48dfc2c762f",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam4",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 780,
+        "wires": [
+            [
+                "19d8d3069d8f95ea"
+            ]
+        ]
+    },
+    {
+        "id": "19d8d3069d8f95ea",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 12",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_4_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 780,
+        "wires": [
+            [
+                "99c54146ad2f770d"
+            ]
+        ]
+    },
+    {
+        "id": "99c54146ad2f770d",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc3f56c3415291da",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 860,
+        "wires": [
+            [
+                "12d9fd0900edc259"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "12d9fd0900edc259",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam5",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 860,
+        "wires": [
+            [
+                "bbd13cb3b2377c7a"
+            ]
+        ]
+    },
+    {
+        "id": "bbd13cb3b2377c7a",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 13",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_5_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 860,
+        "wires": [
+            [
+                "f9788864dc8b82ec"
+            ]
+        ]
+    },
+    {
+        "id": "f9788864dc8b82ec",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08c1aea77a0e4735",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 940,
+        "wires": [
+            [
+                "f0ebd1aec012e823"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f0ebd1aec012e823",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam6",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 940,
+        "wires": [
+            [
+                "b99c98fa0dc34284"
+            ]
+        ]
+    },
+    {
+        "id": "b99c98fa0dc34284",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 14",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_6_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 940,
+        "wires": [
+            [
+                "ef2486abcb831ab5"
+            ]
+        ]
+    },
+    {
+        "id": "ef2486abcb831ab5",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e65d01d8f3cd95c",
+        "type": "trigger",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "op1": "กล้องดับหรืออื่นๆ",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 1910,
+        "y": 1100,
+        "wires": [
+            [
+                "538fd9df1efc81da"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "538fd9df1efc81da",
+        "type": "http request",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "Link Cam8",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.13.15/cgi-bin/snapshot.cgi?channel=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "digest",
+        "senderr": false,
+        "headers": [],
+        "x": 2130,
+        "y": 1100,
+        "wires": [
+            [
+                "9c57c3de982ff5fa"
+            ]
+        ]
+    },
+    {
+        "id": "9c57c3de982ff5fa",
+        "type": "function",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "function 15",
+        "func": "var now = new Date();\n\n// 1. สร้างชื่อวันที่สำหรับเป็น \"ชื่อโฟลเดอร์\" (เช่น 2026-02-09)\nvar folderName = now.getFullYear() + \"-\" + (now.getMonth()+1).toString().padStart(2, '0') + \"-\" + now.getDate().toString().padStart(2, '0');\n\n// 2. สร้างชื่อไฟล์เวลา (เหมือนเดิม)\nvar timeString = now.getHours().toString().padStart(2, '0') + \"-\" + now.getMinutes().toString().padStart(2, '0') + \"-\" + now.getSeconds().toString().padStart(2, '0');\n\nvar station = msg.station_id || \"Unknown\";\n\n// 3. เอามาประกอบร่าง (ใส่ \\\\ คั่นเพื่อบอกว่าเป็นโฟลเดอร์ย่อย)\nmsg.filename = \"D:\\\\SMART-FIREPUMP-SYSTEMV2026\\\\logscamera\\\\\" + folderName + \"\\\\alert_Station_8_Fault_\" + timeString + \".jpg\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 1100,
+        "wires": [
+            [
+                "9c688f708fbc292c"
+            ]
+        ]
+    },
+    {
+        "id": "9c688f708fbc292c",
+        "type": "file",
+        "z": "b4bc1443fc46b358",
+        "g": "93256a72c455a563",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2540,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3860d8fd5640f9de",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.13.71",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": 2,
+        "cycletime": 1000,
+        "timeout": 2000,
+        "name": "",
+        "vartable": [
+            {
+                "addr": "DB1,X1108.0",
+                "name": "Start/Stop (Run) 01"
+            },
+            {
+                "addr": "DB1,X1108.1",
+                "name": "Reading/Fault 01"
+            },
+            {
+                "addr": "DB1,INT1032",
+                "name": "Oil Sensors (Spare) 01"
+            },
+            {
+                "addr": "DB1,X1108.2",
+                "name": "Start/Stop (Run) 02"
+            },
+            {
+                "addr": "DB1,X1108.3",
+                "name": "Reading/Fault 02"
+            },
+            {
+                "addr": "DB1,INT1034",
+                "name": "Oil Sensors (Spare) 02"
+            },
+            {
+                "addr": "DB1,X1108.4",
+                "name": "Start/Stop (Run) 03"
+            },
+            {
+                "addr": "DB1,X1108.5",
+                "name": "Reading/Fault 03"
+            },
+            {
+                "addr": "DB1,INT1036",
+                "name": "Oil Sensors (Spare) 03"
+            },
+            {
+                "addr": "DB1,X1108.6",
+                "name": "Start/Stop (Run) 04"
+            },
+            {
+                "addr": "DB1,X1108.7",
+                "name": "Reading/Fault 04"
+            },
+            {
+                "addr": "DB1,INT1038",
+                "name": "Oil Sensors (Spare) 04"
+            },
+            {
+                "addr": "DB1,X1109.0",
+                "name": "Start/Stop (Run) 05"
+            },
+            {
+                "addr": "DB1,X1109.1",
+                "name": "Reading/Fault 05"
+            },
+            {
+                "addr": "DB1,INT1040",
+                "name": "Oil Sensors (Spare) 05"
+            },
+            {
+                "addr": "DB1,X1109.2",
+                "name": "Start/Stop (Run) 06"
+            },
+            {
+                "addr": "DB1,X1109.3",
+                "name": "Reading/Fault 06"
+            },
+            {
+                "addr": "DB1,INT1042",
+                "name": "Oil Sensors (Spare) 06"
+            },
+            {
+                "addr": "DB1,X1109.4",
+                "name": "Start/Stop (Run) 07"
+            },
+            {
+                "addr": "DB1,X1109.5",
+                "name": "Reading/Fault 07"
+            },
+            {
+                "addr": "DB1,INT1044",
+                "name": "Oil Sensors (Spare) 07"
+            },
+            {
+                "addr": "DB1,X1109.6",
+                "name": "Start/Stop (Run) 08"
+            },
+            {
+                "addr": "DB1,X1109.7",
+                "name": "Reading/Fault 08"
+            },
+            {
+                "addr": "DB1,INT1046",
+                "name": "Oil Sensors (Spare) 08"
+            }
+        ]
+    },
+    {
+        "id": "7479a431e0acf380",
+        "type": "MySQLdatabase",
+        "name": "firepump_db",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "firepump_db",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "b75d9b192b66b3eb",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9bc7fc9cbe55cd40",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-s7": "3.1.1",
+            "node-red-node-mysql": "3.0.0"
+        }
+    }
+]
