@@ -6,11 +6,12 @@ const STATION_NAMES = {
     1: "TS4",
     2: "TS5",
     3: "TS6",
-    4: "ผลิตถุง #1./2.",
-    11: "ยุ้ง C",
+    4: "ผลิตถุง #1.",
+    5: "ผลิตถุง #2.",
     6: "Packer",
     7: "CFB/ยุ้ง Biomass",
-    8: "มอตาร์"
+    8: "มอตาร์",
+    11: "ยุ้ง C"
 };
 
 const FirePumpPopup = ({ data }) => {
@@ -20,7 +21,12 @@ const FirePumpPopup = ({ data }) => {
     let StatusIcon = CheckCircle;
     let borderColor = 'border-green-500/50';
 
-    if (data.status_fault === 0) {
+    if (data.status_fault === -1) {
+        statusText = 'OFFLINE';
+        statusColor = 'text-gray-500';
+        StatusIcon = AlertTriangle;
+        borderColor = 'border-gray-600/50';
+    } else if (data.status_fault === 0) {
         statusText = 'FAULT';
         statusColor = 'text-red-500';
         StatusIcon = AlertTriangle;
@@ -62,7 +68,7 @@ const FirePumpPopup = ({ data }) => {
                             <Droplets size={10} className="text-blue-500 flex-shrink-0" /> Oil Pressure
                         </p>
                         <div className="flex items-baseline gap-1 overflow-hidden">
-                            <span className={`text-3xl font-black font-mono truncate block ${data.status_fault === 0 ? 'text-red-400' : 'text-blue-400'}`}>
+                            <span className={`text-3xl font-black font-mono truncate block ${data.status_fault === -1 ? 'text-gray-500' : (data.status_fault === 0 ? 'text-red-400' : 'text-blue-400')}`}>
                                 {data.oil_pressure || 0}
                             </span>
                             <span className="text-xs text-gray-500 font-medium">Bar</span>

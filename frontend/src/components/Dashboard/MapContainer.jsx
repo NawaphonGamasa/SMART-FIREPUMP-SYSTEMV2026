@@ -32,7 +32,12 @@ function ClickLogger() {
 ================================ */
 const createIcon = (statusRun, statusFault, isNearTop) => {
     let colorClass = 'marker-green';
-    if (statusFault === 0) colorClass = 'marker-red';
+   // เช็ค -1 ก่อน ถ้าเป็น -1 ให้ใส่สีเทา
+    if (statusFault === -1) {
+        colorClass = 'marker-gray';
+    } else if (statusFault === 0) {
+        colorClass = 'marker-red';
+    }
 
     const anchorPosition = isNearTop ? [0, 20] : [0, -10];
 

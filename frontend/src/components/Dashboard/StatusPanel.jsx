@@ -7,8 +7,8 @@ const STATION_NAMES = {
     1: "TS4",
     2: "TS5",
     3: "TS6",
-    4: "ผลิตถุง #1./2.",
-    5: "",
+    4: "ผลิตถุง #1.",
+    5: "ผลิตถุง #2.",
     6: "Packer",
     7: "CFB/ยุ้ง Biomass",
     8: "มอตาร์",
@@ -24,10 +24,10 @@ const StatusPanel = ({ stations }) => {
         navigate('/login');
         window.location.reload();
     };
-    
+
     const [timeStr, setTimeStr] = useState(new Date().toLocaleString('th-TH'));
     const [filter, setFilter] = useState('ALL');
-    
+
     // report state...
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
     const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0]);
@@ -108,7 +108,7 @@ const StatusPanel = ({ stations }) => {
 
     return (
         <div className="flex flex-col h-full w-full bg-[#0B1121] text-white border-l border-gray-800 font-sans relative overflow-hidden select-none">
-            
+
             {/* --- REPORT MODAL --- */}
             {isReportModalOpen && (
                 <div className="fixed inset-0 z-[120] flex items-center justify-center p-0 lg:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in zoom-in duration-200">
@@ -163,21 +163,21 @@ const StatusPanel = ({ stations }) => {
                                         <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('status_fault')}>Fault Status {renderSortIcon('status_fault')}</div>
                                         <div className="flex items-center justify-end gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('oil_pressure')}>Pressure (Bar) {renderSortIcon('oil_pressure')}</div>
                                     </div>
-                                    
+
                                     {/* ✅ เอา max-h ออก เพื่อให้ยืดหยุ่นตามหน้าจอจริงแบบ 100% */}
                                     <div className="flex-1 overflow-y-auto custom-scrollbar p-2 min-w-[600px]">
                                         {isLoadingReport ? <div className="text-center py-10 text-gray-500 animate-pulse">Loading Report...</div> :
                                             sortedReportData.length === 0 ? <div className="text-center py-10 text-gray-500">No data found</div> :
-                                            sortedReportData.map((row, i) => (
-                                                <div key={i} className="grid grid-cols-5 p-3 text-sm border-b border-gray-800 hover:bg-white/5 items-center">
-                                                    {/* ... (เนื้อหาตารางเหมือนเดิม) ... */}
-                                                    <div className="font-mono text-gray-400 text-xs">{new Date(row.timestamp).toLocaleDateString('th-TH', { day: '2-digit', month: '2-digit' })} <span className="text-gray-500">|</span> {new Date(row.timestamp).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })}</div>
-                                                    <div className="text-center font-bold text-gray-300">Engine Fire Pump{STATION_NAMES[row.station_id] || `ST-${row.station_id}`.toString().padStart(2, '0')}</div>
-                                                    <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_run === 1 ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent'}`}>{row.status_run === 1 ? 'RUNNING' : 'STOP'}</span></div>
-                                                    <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_fault === 0 ? 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent ' : 'bg-green-500/20 text-green-400 border border-green-500/30'}`}>{row.status_fault === 0 ? 'FAULT' : 'READING'}</span></div>
-                                                    <div className="text-right font-mono text-blue-400 font-bold text-base">{Number(row.oil_pressure || 0).toFixed(1)}</div>
-                                                </div>
-                                            ))}
+                                                sortedReportData.map((row, i) => (
+                                                    <div key={i} className="grid grid-cols-5 p-3 text-sm border-b border-gray-800 hover:bg-white/5 items-center">
+                                                        {/* ... (เนื้อหาตารางเหมือนเดิม) ... */}
+                                                        <div className="font-mono text-gray-400 text-xs">{new Date(row.timestamp).toLocaleDateString('th-TH', { day: '2-digit', month: '2-digit' })} <span className="text-gray-500">|</span> {new Date(row.timestamp).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })}</div>
+                                                        <div className="text-center font-bold text-gray-300">Engine Fire Pump{STATION_NAMES[row.station_id] || `ST-${row.station_id}`.toString().padStart(2, '0')}</div>
+                                                        <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_run === 1 ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent'}`}>{row.status_run === 1 ? 'RUNNING' : 'STOP'}</span></div>
+                                                        <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_fault === 0 ? 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent ' : 'bg-green-500/20 text-green-400 border border-green-500/30'}`}>{row.status_fault === 0 ? 'FAULT' : 'READING'}</span></div>
+                                                        <div className="text-right font-mono text-blue-400 font-bold text-base">{Number(row.oil_pressure || 0).toFixed(1)}</div>
+                                                    </div>
+                                                ))}
                                     </div>
                                 </div>
                             </div>
@@ -226,23 +226,31 @@ const StatusPanel = ({ stations }) => {
             {/* --- LIST CONTENT --- */}
             <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 custom-scrollbar min-h-0">
                 {displayStations.map((st) => {
+                    const isOffline = st.status_fault === -1;
                     const isFault = st.status_fault === 0;
                     const isRun = st.status_run === 1;
 
                     let cardStyle = 'bg-green-900/10 border-green-500/30';
                     let statusText = 'READING';
                     let textClass = 'text-green-400';
-
-                    if (isFault) {
+                    // 1. ดัก Offline ก่อน
+                    if (isOffline) {
+                        cardStyle = 'bg-gray-800/30 border-gray-600/30';
+                        statusText = 'OFFLINE';
+                        textClass = 'text-gray-500';
+                    }
+                    // 2. ค่อยดัก Fault
+                    else if (isFault) {
                         cardStyle = 'bg-red-900/10 border-red-500/50 shadow-[0_0_15px_rgba(239,68,68,0.15)]';
                         statusText = 'FAULT';
                         textClass = 'text-red-400';
-                    } else if (isRun) {
+                    }
+                    // 3. ค่อยดัก Run
+                    else if (isRun) {
                         cardStyle = 'bg-green-900/10 border-green-500/50 shadow-[0_0_15px_rgba(34,197,94,0.15)]';
                         statusText = 'RUNNING';
                         textClass = 'text-green-400';
                     }
-
                     return (
                         <div key={st.station_id} className={`p-3 sm:p-4 rounded-xl border ${cardStyle} transition-all hover:bg-white/5 relative group`}>
                             {/* ... (การ์ด Station เหมือนเดิม) ... */}
@@ -262,11 +270,11 @@ const StatusPanel = ({ stations }) => {
                             <div className="grid grid-cols-2 gap-2 pt-2 sm:pt-3 border-t border-gray-700/50">
                                 <div className="flex items-center justify-between bg-black/20 p-1.5 rounded-lg border border-white/5">
                                     <span className="text-[9px] sm:text-[10px] text-gray-400 font-bold uppercase">Run / Stop</span>
-                                    <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full shadow-lg ${isRun ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent'}`}></div>
+                                    <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full shadow-lg ${isOffline ? 'bg-gray-600' : (isRun ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent')}`}></div>
                                 </div>
                                 <div className="flex items-center justify-between bg-black/20 p-1.5 rounded-lg border border-white/5">
                                     <span className="text-[9px] sm:text-[10px] text-gray-400 font-bold uppercase">Reading / Fault</span>
-                                    <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full shadow-lg ${st.status_fault === 1 ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent'}`}></div>
+                                    <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full shadow-lg ${isOffline ? 'bg-gray-600' : (st.status_fault === 1 ? 'bg-green-500 shadow-green-500/50 blink-urgent' : 'bg-red-500 shadow-red-500/50 blink-urgent')}`}></div>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +301,7 @@ const StatusPanel = ({ stations }) => {
                     <LogOut size={18} className="group-hover:scale-110 transition-transform duration-300 ml-1" />
                 </button>
             </div>
-            
+
         </div>
     );
 };
