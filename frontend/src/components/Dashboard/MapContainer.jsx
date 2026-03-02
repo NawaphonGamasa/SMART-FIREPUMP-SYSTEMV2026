@@ -1,18 +1,39 @@
-import React from 'react';
-import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import { MapContainer, ImageOverlay, Marker, Popup, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import FirePumpPopup from './StationPopup.jsx';
 
-// ขอบเขตของรูปแผนที่
+// ขอบเขตของรูปแผนที่ (สูง 1284px, กว้าง 2048px)
 const bounds = [[1284, 0], [0, 2048]];
 
+/* ================================
+   🎯 Component สำหรับดักคลิกบนแผนที่
+================================ */
+function ClickLogger() {
+    useMapEvents({
+        click(e) {
+            if (window.enableCoordMode) {
+                const x = Math.round(e.latlng.lng);
+                const y = Math.round(e.latlng.lat);
+
+                console.log("y:", y);
+                console.log("X:", x);
+
+                alert(`Y: ${y}\nX: ${x}`);
+            }
+        },
+    });
+    return null;
+}
+
+/* ================================
+   🎯 สร้าง Marker Icon
+================================ */
 const createIcon = (statusRun, statusFault, isNearTop) => {
     let colorClass = 'marker-green';
     if (statusFault === 0) colorClass = 'marker-red';
 
-    // ถ้าอยู่บน (isNearTop) -> ให้จุดเริ่มอยู่ที่ "ก้น" ของหมุด ([0, 20]) เพื่อจะงอกลงล่าง
-    // ถ้าอยู่ล่าง (ปกติ) -> ให้จุดเริ่มอยู่ที่ "หัว" ของหมุด ([0, -10]) เพื่อจะงอกขึ้นบน
     const anchorPosition = isNearTop ? [0, 20] : [0, -10];
 
     return L.divIcon({
@@ -24,7 +45,26 @@ const createIcon = (statusRun, statusFault, isNearTop) => {
     });
 };
 
+/* ================================
+   🎯 Main Map Component
+================================ */
 const FirePumpMap = ({ stations }) => {
+
+    // เปิดโหมดดูพิกัดจาก Console
+    useEffect(() => {
+        window.enableCoordMode = false;
+
+        window.enableCoords = () => {
+            window.enableCoordMode = true;
+            console.log("✅ Coordinate Mode: ON");
+        };
+
+        window.disableCoords = () => {
+            window.enableCoordMode = false;
+            console.log("❌ Coordinate Mode: OFF");
+        };
+    }, []);
+
     return (
         <MapContainer
             crs={L.CRS.Simple}
@@ -33,14 +73,20 @@ const FirePumpMap = ({ stations }) => {
             maxBoundsViscosity={1.0}
             className="w-full h-full bg-[#0B1121] z-0 rounded-none lg:rounded-2xl shadow-none lg:shadow-2xl lg:border lg:border-gray-800 outline-none"
             minZoom={0}
-            maxZoom={2} zoomSnap={0.1}
+            maxZoom={2}
+            zoomSnap={0.1}
             scrollWheelZoom={true}
             style={{ height: '100%', width: '100%' }}
         >
+            {/* 🎯 ตัวจับคลิก */}
+            <ClickLogger />
+
+            {/* 🎯 รูปแผนที่ */}
             <ImageOverlay url="/maps/factory-map.jpg" bounds={bounds} />
 
+            {/* 🎯 Marker Stations */}
             {stations.map((st) => {
-                // เช็คว่าหมุดอยู่โซนบนหรือไม่ (ค่า Y > 500 คือเริ่มสูงแล้ว)
+
                 const isNearTop = st.position && st.position[0] > 500;
 
                 return (
@@ -49,9 +95,8 @@ const FirePumpMap = ({ stations }) => {
                         position={st.position || [0, 0]}
                         icon={createIcon(st.status_run, st.status_fault, isNearTop)}
                     >
-                        <Popup 
-                            // ✅ ถ้าอยู่โซนบน ให้เพิ่มคลาส 'popup-flip' เพื่อกลับหัว
-                            className={`custom-popup ${isNearTop ? 'popup-flip' : ''}`} 
+                        <Popup
+                            className={`custom-popup ${isNearTop ? 'popup-flip' : ''}`}
                             autoPan={false}
                         >
                             <FirePumpPopup data={st} />
@@ -59,6 +104,7 @@ const FirePumpMap = ({ stations }) => {
                     </Marker>
                 );
             })}
+
         </MapContainer>
     );
 };

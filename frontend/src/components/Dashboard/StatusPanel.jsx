@@ -3,6 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { Activity, Zap, AlertTriangle, CheckCircle, Droplets, FileText, X, Filter, ChevronUp, ChevronDown, ArrowUpDown, LogOut } from 'lucide-react';
 import { getDailyReport } from '../../services/api';
 
+const STATION_NAMES = {
+    1: "TS4",
+    2: "TS5",
+    3: "TS6",
+    4: "ผลิตถุง #1./2.",
+    5: "",
+    6: "Packer",
+    7: "CFB/ยุ้ง Biomass",
+    8: "มอตาร์",
+    11: "ยุ้ง C"
+};
+
 const StatusPanel = ({ stations }) => {
     const navigate = useNavigate();
     const userRole = localStorage.getItem('role');
@@ -146,7 +158,7 @@ const StatusPanel = ({ stations }) => {
                                 <div className="overflow-x-auto w-full flex-1 flex flex-col">
                                     <div className="grid grid-cols-5 bg-gray-800 p-3 text-sm font-bold text-gray-300 border-b border-gray-700 select-none min-w-[600px] flex-shrink-0">
                                         <div className="flex items-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('timestamp')}>Date / Time {renderSortIcon('timestamp')}</div>
-                                        <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('station_id')}>Station ID {renderSortIcon('station_id')}</div>
+                                        <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('station_id')}>Station Name {renderSortIcon('station_id')}</div>
                                         <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('status_run')}>Run Status {renderSortIcon('status_run')}</div>
                                         <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('status_fault')}>Fault Status {renderSortIcon('status_fault')}</div>
                                         <div className="flex items-center justify-end gap-1 cursor-pointer hover:text-white transition-colors" onClick={() => handleSort('oil_pressure')}>Pressure (Bar) {renderSortIcon('oil_pressure')}</div>
@@ -160,7 +172,7 @@ const StatusPanel = ({ stations }) => {
                                                 <div key={i} className="grid grid-cols-5 p-3 text-sm border-b border-gray-800 hover:bg-white/5 items-center">
                                                     {/* ... (เนื้อหาตารางเหมือนเดิม) ... */}
                                                     <div className="font-mono text-gray-400 text-xs">{new Date(row.timestamp).toLocaleDateString('th-TH', { day: '2-digit', month: '2-digit' })} <span className="text-gray-500">|</span> {new Date(row.timestamp).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })}</div>
-                                                    <div className="text-center font-bold text-gray-300">ST-{(row.station_id).toString().padStart(2, '0')}</div>
+                                                    <div className="text-center font-bold text-gray-300">Engine Fire Pump{STATION_NAMES[row.station_id] || `ST-${row.station_id}`.toString().padStart(2, '0')}</div>
                                                     <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_run === 1 ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent'}`}>{row.status_run === 1 ? 'RUNNING' : 'STOP'}</span></div>
                                                     <div className="text-center"><span className={`text-[10px] font-bold px-2 py-0.5 rounded ${row.status_fault === 0 ? 'bg-red-500/20 text-red-400 border border-red-500/30 blink-urgent ' : 'bg-green-500/20 text-green-400 border border-green-500/30'}`}>{row.status_fault === 0 ? 'FAULT' : 'READING'}</span></div>
                                                     <div className="text-right font-mono text-blue-400 font-bold text-base">{Number(row.oil_pressure || 0).toFixed(1)}</div>
@@ -235,7 +247,7 @@ const StatusPanel = ({ stations }) => {
                         <div key={st.station_id} className={`p-3 sm:p-4 rounded-xl border ${cardStyle} transition-all hover:bg-white/5 relative group`}>
                             {/* ... (การ์ด Station เหมือนเดิม) ... */}
                             <div className="flex justify-between items-center mb-2 sm:mb-3">
-                                <h3 className="font-bold text-gray-200 text-xs sm:text-sm">Station {st.station_id}</h3>
+                                <h3 className="font-bold text-gray-200 text-xs sm:text-sm">Engine Fire Pump {STATION_NAMES[st.station_id] || `Station ${st.station_id}`}</h3>
                                 <div className={`text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded border border-white/10 bg-black/20 ${textClass} tracking-wider`}>{statusText}</div>
                             </div>
                             <div className="flex justify-between items-end mb-3 sm:mb-4">

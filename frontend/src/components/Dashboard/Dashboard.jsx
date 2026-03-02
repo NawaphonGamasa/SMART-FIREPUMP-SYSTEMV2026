@@ -4,11 +4,18 @@ import StatusPanel from "./StatusPanel";
 import Loading from '../Common/Loading';
 import useRealtime from '../../hooks/useRealtime';
 
-const STATION_COORDS = [
-    [400, 500], [400, 800], [400, 1100], [400, 1400],
-    [800, 500], [800, 800], [800, 1100], [700, 700]
-];
-
+const STATION_COORDS = {
+    1: [618, 577],
+    2: [722, 644],
+    3: [805, 613],
+    4: [590, 516],
+    5: [0, 0], // ไม่มีข้อมูลตำแหน่งสำหรับ Station ID 5
+    6: [1019, 146],
+    7: [811, 726],
+    8: [1154, 217],
+    11: [364, 881]
+};
+    
 const FirePumpDashboard = () => {
     const { stations, isConnected, isLoading } = useRealtime();
 
@@ -17,7 +24,7 @@ const FirePumpDashboard = () => {
     const hostname = window.location.hostname;
     const mapStations = stations.map((st) => ({
         ...st,
-        position: STATION_COORDS[st.station_id - 1] || [0, 0],
+        position: STATION_COORDS[st.station_id] || [0, 0],
         camUrl: `http://${hostname}:1880/camfire${st.station_id}` 
     }));
 

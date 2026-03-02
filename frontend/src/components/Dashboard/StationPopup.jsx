@@ -2,6 +2,17 @@ import React from 'react';
 import { AlertTriangle, Zap, CheckCircle, Activity, Droplets } from 'lucide-react';
 import CCTVPlayer from '../Video/CCTVPlayer';
 
+const STATION_NAMES = {
+    1: "TS4",
+    2: "TS5",
+    3: "TS6",
+    4: "ผลิตถุง #1./2.",
+    11: "ยุ้ง C",
+    6: "Packer",
+    7: "CFB/ยุ้ง Biomass",
+    8: "มอตาร์"
+};
+
 const FirePumpPopup = ({ data }) => {
     // Logic เดิม
     let statusText = 'READING';
@@ -33,7 +44,7 @@ const FirePumpPopup = ({ data }) => {
             <div className="bg-gray-800/80 p-2.5 flex justify-between items-center border-b border-gray-700">
                 <h3 className="text-sm font-bold flex items-center gap-2 text-gray-100 truncate">
                     <Activity size={16} className="text-orange-400 flex-shrink-0" />
-                    <span className="truncate">Station {data.station_id}</span>
+                    <span className="truncate">Engine Fire Pump {STATION_NAMES[data.station_id] || `Station ${data.station_id}`}</span>
                 </h3>
                 <div className={`flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/40 border border-white/5 whitespace-nowrap flex-shrink-0 ${statusColor}`}>
                     <StatusIcon size={10} />
